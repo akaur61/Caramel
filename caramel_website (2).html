@@ -7,27 +7,27 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --tone-950:#1A120B;
-  --tone-900:#2C2014;
-  --tone-800:#3D2E1A;
-  --tone-650:#7A4F25;
+  --tone-950:#211207;
+  --tone-900:#2C1A0E;
+  --tone-800:#4A2D19;
+  --tone-650:#7A4E2D;
   --gold:#C9A227;
-  --tone-300:#E0C36D;
-  --tone-150:#F5EFE4;
-  --tone-50:#FDFAF6;
+  --tone-300:#D8BE59;
+  --tone-150:#EDE0C4;
+  --tone-50:#FAF6EE;
   --cream:var(--tone-150);
-  --caramel:#C8956C;
-  --caramel-dark:#9E6744;
-  --caramel-light:#EDD9C5;
+  --caramel:var(--tone-650);
+  --caramel-dark:var(--tone-800);
+  --caramel-light:var(--tone-150);
   --gold-light:var(--tone-300);
-  --gold-dark:#8B6914;
+  --gold-dark:#7C620F;
   --warm-white:var(--tone-50);
   --bg-dark:var(--tone-900);
   --bg-mid:var(--tone-800);
-  --text-dark:#2C2118;
-  --text-mid:#7A6455;
-  --text-light:#B5A090;
-  --border:#E2D4C0;
+  --text-dark:var(--tone-900);
+  --text-mid:var(--tone-650);
+  --text-light:#A78668;
+  --border:#DCCBAA;
   --ease-luxury:cubic-bezier(0.22,1,0.36,1);
   --shadow-gold:0 18px 44px rgba(201,162,39,0.18);
 }
@@ -41,18 +41,18 @@ body{font-family:'DM Sans',sans-serif;background:var(--warm-white);color:var(--t
 
 nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
-  background:rgba(44,32,20,0.96);backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(201,168,76,0.2);
+  background:rgba(44,26,14,0.96);backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(201,162,39,0.18);
   display:flex;align-items:center;justify-content:space-between;
   padding:0 5%;height:72px;
   transition:background 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 nav:hover{box-shadow:0 18px 60px rgba(20,14,6,0.28)}
 .logo{display:flex;align-items:center;height:40px;background:transparent}
-.logo img{height:38px;width:auto;object-fit:contain;background:transparent;mix-blend-mode:normal;filter:drop-shadow(0 2px 8px rgba(201,168,76,0.28));transition:filter 0.3s ease,transform 0.3s ease}
-.logo img:hover{filter:drop-shadow(0 4px 16px rgba(201,168,76,0.52));transform:scale(1.03)}
+.logo img{height:38px;width:auto;object-fit:contain;background:transparent;mix-blend-mode:normal;filter:drop-shadow(0 2px 8px rgba(201,162,39,0.28));transition:filter 0.3s ease,transform 0.3s ease}
+.logo img:hover{filter:drop-shadow(0 4px 16px rgba(201,162,39,0.52));transform:scale(1.03)}
 .nav-links{display:flex;gap:2.4rem;list-style:none}
-.nav-links a{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(240,208,128,0.74);text-decoration:none;position:relative;padding-bottom:3px;transition:color 0.3s ease, transform 0.3s ease}
+.nav-links a{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(216,190,89,0.74);text-decoration:none;position:relative;padding-bottom:3px;transition:color 0.3s ease, transform 0.3s ease}
 .nav-links a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold-light);transition:width 0.3s ease}
 .nav-links a:hover{color:var(--gold-light);transform:translateY(-1px)}
 .nav-links a:hover::after{width:100%}
@@ -63,9 +63,9 @@ nav:hover{box-shadow:0 18px 60px rgba(20,14,6,0.28)}
 .hero{
   min-height:100vh;display:grid;grid-template-columns:1fr 1fr;
   padding-top:72px;
-  background:linear-gradient(160deg,var(--tone-950) 0%,var(--tone-900) 42%,var(--tone-800) 70%,var(--tone-650) 100%);
+  background:linear-gradient(180deg,var(--tone-900) 0%,var(--tone-900) 58%,var(--tone-650) 100%);
 }
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 72% 48%, rgba(201,168,76,0.08) 0%, transparent 66%);pointer-events:none}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 72% 48%, rgba(201,162,39,0.08) 0%, transparent 66%);pointer-events:none}
 .hero-left{
   display:flex;flex-direction:column;justify-content:center;
   padding:8% 6% 8% 8%;position:relative;z-index:1;
@@ -73,21 +73,21 @@ nav:hover{box-shadow:0 18px 60px rgba(20,14,6,0.28)}
 .hero-tag{font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:8px}
 .hero-tag::before{content:'';width:32px;height:1px;background:var(--gold)}
 .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,6vw,82px);font-weight:300;line-height:1.05;margin-bottom:1.5rem;color:var(--gold-light)}
-.hero-title em{font-style:italic;color:rgba(240,208,128,0.62)}
-.hero-sub{font-size:15px;color:rgba(240,208,128,0.58);line-height:1.9;max-width:420px;margin-bottom:2.5rem;font-weight:300}
+.hero-title em{font-style:italic;color:rgba(216,190,89,0.62)}
+.hero-sub{font-size:15px;color:rgba(216,190,89,0.58);line-height:1.9;max-width:420px;margin-bottom:2.5rem;font-weight:300}
 .hero-actions{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
 .btn-primary,.btn-secondary,.btn-tertiary,.btn-ghost{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:opacity 0.25s ease,transform 0.25s ease,letter-spacing 0.3s ease,border-color 0.25s ease,color 0.25s ease}
 .btn-primary{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 50%,var(--gold-dark) 100%);color:var(--bg-dark);padding:14px 36px;border-radius:2px;box-shadow:var(--shadow-gold)}
 .btn-primary:hover{opacity:0.88;transform:translateY(-2px);letter-spacing:0.19em}
 .btn-secondary{color:var(--gold-light);border:1px solid rgba(201,162,39,0.38);padding:13px 30px;border-radius:2px;background:rgba(201,162,39,0.04)}
 .btn-secondary:hover{border-color:var(--gold-light);background:rgba(201,162,39,0.1);transform:translateY(-2px);letter-spacing:0.18em}
-.btn-tertiary,.btn-ghost{color:rgba(240,208,128,0.62);border-bottom:1px solid rgba(201,168,76,0.32);padding-bottom:3px;background:transparent}
+.btn-tertiary,.btn-ghost{color:rgba(216,190,89,0.62);border-bottom:1px solid rgba(201,162,39,0.32);padding-bottom:3px;background:transparent}
 .btn-tertiary:hover,.btn-ghost:hover{color:var(--gold-light);border-color:var(--gold-light);letter-spacing:0.16em}
 .hero-right{
   background:rgba(0,0,0,0.15);display:flex;align-items:center;justify-content:center;
   position:relative;overflow:hidden;transition:transform 0.35s ease, box-shadow 0.35s ease;
 }
-.hero-right::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 42% 42%, rgba(201,168,76,0.1) 0%, transparent 70%);pointer-events:none}
+.hero-right::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 42% 42%, rgba(201,162,39,0.1) 0%, transparent 70%);pointer-events:none}
 .hero-right:hover{box-shadow:0 24px 60px rgba(20,14,6,0.18)}
 .hero-img-wrap{position:relative;width:86%;max-width:600px;transition:transform 0.35s ease}
 .hero-right:hover .hero-img-wrap{transform:translateY(-2px)}
@@ -95,11 +95,11 @@ nav:hover{box-shadow:0 18px 60px rgba(20,14,6,0.28)}
   position:relative;
   margin:0;
   background:rgba(253,250,246,0.06);
-  border:1px solid rgba(201,168,76,0.26);
+  border:1px solid rgba(201,162,39,0.26);
   border-radius:6px;
   padding:10px;
   overflow:hidden;
-  box-shadow:0 34px 78px rgba(20,14,6,0.32), inset 0 1px 0 rgba(240,208,128,0.22);
+  box-shadow:0 34px 78px rgba(20,14,6,0.32), inset 0 1px 0 rgba(216,190,89,0.22);
   backdrop-filter:blur(8px);
 }
 .desk-mockup::after{
@@ -108,7 +108,7 @@ nav:hover{box-shadow:0 18px 60px rgba(20,14,6,0.28)}
   inset:10px;
   border-radius:4px;
   pointer-events:none;
-  background:linear-gradient(135deg, rgba(240,208,128,0.12), transparent 36%),
+  background:linear-gradient(135deg, rgba(216,190,89,0.12), transparent 36%),
              linear-gradient(0deg, rgba(20,14,6,0.2), transparent 34%);
 }
 .desk-mockup img{
@@ -121,14 +121,14 @@ nav:hover{box-shadow:0 18px 60px rgba(20,14,6,0.28)}
 }
 .desk-mockup > .desk-row{display:none}
 .desk-row{display:flex;gap:1rem;align-items:flex-start}
-.organizer{background:rgba(201,168,76,0.18);height:120px;flex:2;border-radius:3px;display:flex;flex-direction:column;justify-content:flex-end;padding:10px;gap:6px;border:1px solid rgba(201,168,76,0.2)}
-.org-slot{background:rgba(240,208,128,0.3);height:8px;border-radius:1px;opacity:0.8}
+.organizer{background:rgba(201,162,39,0.18);height:120px;flex:2;border-radius:3px;display:flex;flex-direction:column;justify-content:flex-end;padding:10px;gap:6px;border:1px solid rgba(201,162,39,0.2)}
+.org-slot{background:rgba(216,190,89,0.3);height:8px;border-radius:1px;opacity:0.8}
 .org-slot.tall{height:20px}
-.planter{background:rgba(180,140,80,0.4);height:80px;width:70px;border-radius:50% 50% 30% 30%;display:flex;align-items:center;justify-content:center;font-size:22px;border:1px solid rgba(201,168,76,0.25)}
-.tray{background:rgba(160,120,60,0.3);height:50px;border-radius:3px;display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid rgba(201,168,76,0.2)}
-.pen{width:6px;height:36px;background:rgba(240,208,128,0.4);border-radius:3px;opacity:0.9}
-.notepad{background:rgba(253,250,246,0.08);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:10px;flex:1}
-.notepad-line{height:2px;background:rgba(201,168,76,0.25);border-radius:1px;margin-bottom:6px}
+.planter{background:rgba(122,78,45,0.4);height:80px;width:70px;border-radius:50% 50% 30% 30%;display:flex;align-items:center;justify-content:center;font-size:22px;border:1px solid rgba(201,162,39,0.25)}
+.tray{background:rgba(122,78,45,0.3);height:50px;border-radius:3px;display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid rgba(201,162,39,0.2)}
+.pen{width:6px;height:36px;background:rgba(216,190,89,0.4);border-radius:3px;opacity:0.9}
+.notepad{background:rgba(253,250,246,0.08);border:1px solid rgba(201,162,39,0.2);border-radius:2px;padding:10px;flex:1}
+.notepad-line{height:2px;background:rgba(201,162,39,0.25);border-radius:1px;margin-bottom:6px}
 .notepad-line:last-child{width:60%;margin-bottom:0}
 .desk-accent{position:absolute;top:-20px;right:-20px;width:160px;height:160px;background:var(--gold);border-radius:50%;opacity:0.07}
 .desk-accent2{position:absolute;bottom:20px;left:-30px;width:100px;height:100px;background:var(--gold-light);border-radius:50%;opacity:0.05}
@@ -144,10 +144,10 @@ nav:hover{box-shadow:0 18px 60px rgba(20,14,6,0.28)}
 .hero-right > .kit-badge{display:none}
 .kit-badge span{display:block;font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;font-style:italic;letter-spacing:0;text-transform:none;margin-top:3px;color:var(--bg-dark);opacity:0.8}
 
-.marquee-wrap{background:var(--bg-dark);border-top:1px solid rgba(201,168,76,0.2);border-bottom:1px solid rgba(201,168,76,0.2);overflow:hidden;padding:13px 0}
+.marquee-wrap{background:var(--tone-650);border-top:1px solid rgba(250,246,238,0.08);border-bottom:1px solid rgba(250,246,238,0.08);overflow:hidden;padding:13px 0}
 .marquee{display:flex;gap:3rem;animation:marquee 20s linear infinite;white-space:nowrap}
-.marquee span{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(201,168,76,0.7);opacity:1}
-.marquee span.dot{color:rgba(201,168,76,0.3);opacity:1}
+.marquee span{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(216,190,89,0.82);opacity:1}
+.marquee span.dot{color:rgba(216,190,89,0.42);opacity:1}
 .marquee-wrap:hover .marquee{animation-play-state:paused}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
@@ -157,15 +157,15 @@ nav:hover{box-shadow:0 18px 60px rgba(20,14,6,0.28)}
 .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,54px);font-weight:300;line-height:1.1;margin-bottom:1rem;color:var(--text-dark)}
 .section-sub{font-size:15px;color:var(--text-mid);line-height:1.9;max-width:500px;font-weight:300}
 
-.collections{padding:7rem 8%;background:linear-gradient(180deg,var(--tone-150) 0%,var(--tone-50) 66%,#EFE1C3 100%)}
+.collections{padding:7rem 8%;background:linear-gradient(180deg,var(--tone-150) 0%,var(--tone-150) 70%,var(--tone-50) 100%)}
 .collections-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
 .coll-card{background:var(--warm-white);border:1px solid var(--border);border-radius:3px;overflow:hidden;cursor:pointer;transition:transform 0.4s cubic-bezier(0.22,1,0.36,1),box-shadow 0.4s ease}
-.coll-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(44,32,20,0.12)}
+.coll-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(44,26,14,0.12)}
 .coll-img{height:240px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.coll-img.desk-bg{background:#EDD9C5}
-.coll-img.room-bg{background:#E4D5C7}
-.coll-img.shelf-bg{background:#D9CFC4}
-.coll-icon{font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(44,32,20,0.55);opacity:0.85;border:1px solid rgba(44,32,20,0.18);padding:10px 14px;border-radius:2px;transition:transform 0.5s cubic-bezier(0.22,1,0.36,1),opacity 0.4s ease,border-color 0.4s ease}
+.coll-img.desk-bg{background:var(--tone-150)}
+.coll-img.room-bg{background:var(--tone-50)}
+.coll-img.shelf-bg{background:linear-gradient(135deg,var(--tone-150),rgba(201,162,39,0.18))}
+.coll-icon{font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(44,26,14,0.55);opacity:0.85;border:1px solid rgba(44,26,14,0.18);padding:10px 14px;border-radius:2px;transition:transform 0.5s cubic-bezier(0.22,1,0.36,1),opacity 0.4s ease,border-color 0.4s ease}
 .coll-card:hover .coll-icon{transform:scale(1.12) translateY(-4px);opacity:0.65}
 .coll-body{padding:1.25rem 1.5rem 1.75rem}
 .coll-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;margin-bottom:6px;color:var(--text-dark)}
@@ -173,72 +173,76 @@ nav:hover{box-shadow:0 18px 60px rgba(20,14,6,0.28)}
 .coll-price{font-size:12px;letter-spacing:0.08em;color:var(--gold-dark);font-weight:500;text-transform:uppercase}
 .badge-new{position:absolute;top:14px;right:14px;background:var(--bg-dark);color:var(--gold-light);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;padding:5px 10px;border-radius:1px}
 
-.kit-section{padding:7rem 8%;background:linear-gradient(180deg,var(--tone-900) 0%,var(--tone-950) 72%,var(--tone-800) 100%);display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
-.kit-section .section-tag{color:var(--gold)}
-.kit-section .section-tag::before{background:var(--gold)}
-.kit-section .section-title{color:var(--gold-light)}
-.kit-section .section-sub{color:rgba(240,208,128,0.5)}
+.kit-section{padding:7rem 8%;background:linear-gradient(180deg,var(--gold) 0%,var(--gold) 72%,var(--tone-150) 100%);display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.kit-section .section-tag{color:rgba(44,26,14,0.72)}
+.kit-section .section-tag::before{background:rgba(44,26,14,0.42)}
+.kit-section .section-title{color:var(--tone-900)}
+.kit-section .section-sub{color:rgba(44,26,14,0.64)}
 .kit-items{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
-.kit-item{border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:1rem 1.25rem;transition:border-color 0.3s ease,background 0.3s ease,transform 0.3s ease}
-.kit-item:hover{transform:translateY(-3px);border-color:rgba(201,168,76,0.5);background:rgba(201,168,76,0.06)}
-.kit-item-icon{font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1;color:rgba(240,208,128,0.55);margin-bottom:10px}
-.kit-item-name{font-size:14px;font-weight:500;color:var(--gold-light);margin-bottom:4px}
-.kit-item-desc{font-size:12px;color:rgba(201,168,76,0.45)}
-.kit-visual{background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.15);border-radius:4px;padding:2rem;display:flex;flex-direction:column;gap:1rem;position:relative}
-.kit-box{background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.15);border-radius:3px;padding:1.25rem;display:flex;align-items:center;gap:1rem;transition:border-color 0.3s ease,transform 0.3s ease}
-.kit-box:hover{border-color:rgba(201,168,76,0.4);transform:translateX(4px)}
+.kit-item{border:1px solid rgba(44,26,14,0.22);border-radius:2px;padding:1rem 1.25rem;background:rgba(250,246,238,0.14);transition:border-color 0.3s ease,background 0.3s ease,transform 0.3s ease}
+.kit-item:hover{transform:translateY(-3px);border-color:rgba(44,26,14,0.42);background:rgba(250,246,238,0.24)}
+.kit-item-icon{font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1;color:rgba(44,26,14,0.55);margin-bottom:10px}
+.kit-item-name{font-size:14px;font-weight:500;color:var(--tone-900);margin-bottom:4px}
+.kit-item-desc{font-size:12px;color:rgba(44,26,14,0.56)}
+.kit-visual{background:rgba(250,246,238,0.22);border:1px solid rgba(44,26,14,0.2);border-radius:4px;padding:2rem;display:flex;flex-direction:column;gap:1rem;position:relative}
+.kit-box{background:rgba(250,246,238,0.2);border:1px solid rgba(44,26,14,0.18);border-radius:3px;padding:1.25rem;display:flex;align-items:center;gap:1rem;transition:border-color 0.3s ease,transform 0.3s ease}
+.kit-box:hover{border-color:rgba(44,26,14,0.36);transform:translateX(4px)}
 .kit-box-dot{width:40px;height:40px;border-radius:50%;flex-shrink:0}
 .kit-box-info{flex:1}
-.kit-box-name{font-size:14px;font-weight:500;color:var(--gold-light);margin-bottom:3px}
-.kit-box-sub{font-size:12px;color:rgba(201,168,76,0.45)}
-.kit-total{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 50%,var(--gold-dark) 100%);color:var(--bg-dark);padding:1rem 1.25rem;border-radius:3px;display:flex;justify-content:space-between;align-items:center;margin-top:0.5rem;transition:opacity 0.25s ease,transform 0.25s ease}
+.kit-box-name{font-size:14px;font-weight:500;color:var(--tone-900);margin-bottom:3px}
+.kit-box-sub{font-size:12px;color:rgba(44,26,14,0.56)}
+.kit-total{background:var(--tone-900);color:var(--gold-light);padding:1rem 1.25rem;border-radius:3px;display:flex;justify-content:space-between;align-items:center;margin-top:0.5rem;transition:opacity 0.25s ease,transform 0.25s ease}
 .kit-total:hover{opacity:0.88;transform:translateY(-2px)}
-.kit-total-label{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;opacity:0.7;color:var(--bg-dark)}
-.kit-total-price{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;color:var(--bg-dark)}
+.kit-total-label{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;opacity:0.7;color:rgba(250,246,238,0.7)}
+.kit-total-price{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;color:var(--gold-light)}
 
-.why-section{padding:7rem 8%;background:linear-gradient(180deg,var(--tone-150) 0%,var(--tone-50) 70%,#EFE1C3 100%);text-align:center}
+.why-section{padding:7rem 8%;background:linear-gradient(180deg,var(--tone-650) 0%,var(--tone-650) 72%,var(--gold) 100%);text-align:center}
+.why-section .section-tag{color:var(--gold)}
+.why-section .section-tag::before{background:var(--gold)}
+.why-section .section-title{color:var(--tone-50)}
+.why-section .section-sub{color:rgba(250,246,238,0.62)}
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem;text-align:left;perspective:1000px}
-.why-card{padding:1.75rem;background:transparent;border:1px solid transparent;border-radius:3px;transition:transform 0.4s cubic-bezier(0.23,1,0.32,1), border-color 0.4s ease, background 0.4s ease;position:relative;overflow:hidden}
-.why-card::before{content:'';position:absolute;top:-1px;left:0;right:0;height:1px;background:linear-gradient(to right, transparent, rgba(201,168,76,0.45), transparent);opacity:0}
-.why-card:hover{transform:translateY(-6px);border-color:var(--border);background:var(--warm-white)}
+.why-card{padding:1.75rem;background:rgba(44,26,14,0.1);border:1px solid rgba(250,246,238,0.12);border-radius:3px;transition:transform 0.4s cubic-bezier(0.23,1,0.32,1), border-color 0.4s ease, background 0.4s ease;position:relative;overflow:hidden}
+.why-card::before{content:'';position:absolute;top:-1px;left:0;right:0;height:1px;background:linear-gradient(to right, transparent, rgba(201,162,39,0.45), transparent);opacity:0}
+.why-card:hover{transform:translateY(-6px);border-color:rgba(250,246,238,0.32);background:rgba(44,26,14,0.18)}
 .why-card:hover::before{opacity:1}
-.why-num{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--caramel-light);line-height:1;margin-bottom:1rem;transition:color 0.3s ease,transform 0.4s ease}
+.why-num{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:rgba(201,162,39,0.55);line-height:1;margin-bottom:1rem;transition:color 0.3s ease,transform 0.4s ease}
 .why-card:hover .why-num{color:var(--gold);transform:translateY(-4px)}
-.why-title{font-size:15px;font-weight:500;margin-bottom:0.5rem;color:var(--text-dark)}
-.why-desc{font-size:13px;color:var(--text-mid);line-height:1.9}
+.why-title{font-size:15px;font-weight:500;margin-bottom:0.5rem;color:var(--tone-50)}
+.why-desc{font-size:13px;color:rgba(250,246,238,0.64);line-height:1.9}
 
-.testimonial-section{padding:7rem 8%;background:linear-gradient(180deg,var(--tone-900) 0%,var(--tone-950) 75%,var(--tone-900) 100%)}
-.testimonial-section .section-tag{color:var(--gold);justify-content:center}
-.testimonial-section .section-tag::before{background:var(--gold)}
-.testimonial-section .section-title{color:var(--gold-light);text-align:center}
+.testimonial-section{padding:7rem 8%;background:linear-gradient(180deg,var(--tone-150) 0%,var(--tone-50) 100%)}
+.testimonial-section .section-tag{color:var(--tone-650);justify-content:center}
+.testimonial-section .section-tag::before{background:var(--tone-650)}
+.testimonial-section .section-title{color:var(--tone-900);text-align:center}
 .testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
-.testimonial-card{background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.18);border-radius:3px;padding:2rem;display:flex;flex-direction:column;gap:1.25rem;min-height:230px;position:relative;transition:transform 0.4s cubic-bezier(0.22,1,0.36,1),border-color 0.3s ease}
-.testimonial-card:hover{transform:translateY(-5px);border-color:rgba(201,168,76,0.45)}
-.testimonial-quote{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;font-weight:300;color:rgba(240,208,128,0.8);line-height:1.65;flex:1;position:relative;padding-left:2.5rem}
-.testimonial-quote::before{content:'"';position:absolute;top:-8px;left:0;font-family:'Cormorant Garamond',serif;font-size:4.5rem;color:rgba(201,168,76,0.3);opacity:1;line-height:1}
-.testimonial-author{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:400;color:var(--gold-light)}
-.testimonial-role{font-size:12px;color:rgba(201,168,76,0.4);letter-spacing:0.08em;text-transform:uppercase}
+.testimonial-card{background:rgba(250,246,238,0.72);border:1px solid rgba(122,78,45,0.18);border-radius:3px;padding:2rem;display:flex;flex-direction:column;gap:1.25rem;min-height:230px;position:relative;transition:transform 0.4s cubic-bezier(0.22,1,0.36,1),border-color 0.3s ease}
+.testimonial-card:hover{transform:translateY(-5px);border-color:rgba(122,78,45,0.35)}
+.testimonial-quote{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;font-weight:300;color:rgba(44,26,14,0.72);line-height:1.65;flex:1;position:relative;padding-left:2.5rem}
+.testimonial-quote::before{content:'"';position:absolute;top:-8px;left:0;font-family:'Cormorant Garamond',serif;font-size:4.5rem;color:rgba(201,162,39,0.3);opacity:1;line-height:1}
+.testimonial-author{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:400;color:var(--tone-900)}
+.testimonial-role{font-size:12px;color:rgba(122,78,45,0.52);letter-spacing:0.08em;text-transform:uppercase}
 
 .launch-section{
-  padding:7rem 8%;background:linear-gradient(180deg,var(--tone-900) 0%,var(--tone-950) 100%);text-align:center;
+  padding:7rem 8%;background:var(--tone-50);text-align:center;
 }
-.launch-bg{position:absolute;top:-50%;left:50%;transform:translateX(-50%);width:700px;height:700px;background:var(--gold);border-radius:50%;opacity:0.04}
-.launch-tag{font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
-.launch-title{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,5vw,68px);font-weight:300;color:var(--gold-light);line-height:1.05;margin-bottom:1rem}
-.launch-title em{font-style:italic;color:rgba(240,208,128,0.6)}
-.launch-sub{font-size:15px;color:rgba(201,168,76,0.45);line-height:1.9;max-width:480px;margin:0 auto 2.5rem;font-weight:300}
-.email-form{display:flex;max-width:440px;margin:0 auto;gap:0;border:1px solid rgba(201,168,76,0.25);border-radius:2px;overflow:hidden;transition:border-color 0.3s ease}
+.launch-bg{position:absolute;top:-50%;left:50%;transform:translateX(-50%);width:700px;height:700px;background:var(--gold);border-radius:50%;opacity:0.06}
+.launch-tag{font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--tone-650);margin-bottom:1.5rem}
+.launch-title{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,5vw,68px);font-weight:300;color:var(--tone-900);line-height:1.05;margin-bottom:1rem}
+.launch-title em{font-style:italic;color:var(--tone-650)}
+.launch-sub{font-size:15px;color:rgba(44,26,14,0.62);line-height:1.9;max-width:480px;margin:0 auto 2.5rem;font-weight:300}
+.email-form{display:flex;max-width:440px;margin:0 auto;gap:0;border:1px solid rgba(122,78,45,0.22);border-radius:2px;overflow:hidden;transition:border-color 0.3s ease}
 .email-form:focus-within{border-color:var(--gold)}
-.email-input{flex:1;background:rgba(201,168,76,0.06);border:none;padding:15px 18px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--gold-light);outline:none}
-.email-input::placeholder{color:rgba(201,168,76,0.3)}
+.email-input{flex:1;background:rgba(237,224,196,0.55);border:none;padding:15px 18px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--tone-900);outline:none}
+.email-input::placeholder{color:rgba(44,26,14,0.38)}
 .email-btn{background:linear-gradient(135deg,var(--gold),var(--gold-light));border:none;padding:15px 24px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--bg-dark);cursor:pointer;font-weight:500;transition:opacity 0.25s ease,letter-spacing 0.25s ease;white-space:nowrap}
 .email-btn:hover{opacity:0.85;letter-spacing:0.19em}
-.launch-note{font-size:12px;color:rgba(201,168,76,0.28);margin-top:1rem}
+.launch-note{font-size:12px;color:rgba(122,78,45,0.48);margin-top:1rem}
 
 footer{
   position:relative;
-  background:#140E06;
-  border-top:1px solid rgba(201,168,76,0.12);
+  background:var(--tone-50);
+  border-top:1px solid rgba(122,78,45,0.14);
   padding:2.5rem 8%;
   display:flex;
   justify-content:space-between;
@@ -259,7 +263,7 @@ footer::before{
   align-items:center;
   height:36px;
   padding:0.5rem 0.85rem;
-  background:rgba(201,168,76,0.06);
+  background:rgba(237,224,196,0.65);
   border-radius:5px;
 }
 .footer-logo img{
@@ -267,8 +271,8 @@ footer::before{
   width:auto;
   object-fit:contain;
   mix-blend-mode:normal;
-  filter:drop-shadow(0 1px 6px rgba(201,168,76,0.3));
-  opacity:0.85;
+  filter:drop-shadow(0 1px 6px rgba(122,78,45,0.16));
+  opacity:0.9;
   transition:opacity 0.3s ease, transform 0.3s ease;
 }
 .footer-logo img:hover{
@@ -279,7 +283,7 @@ footer::before{
   position:relative;
   z-index:1;
   font-size:12px;
-  color:rgba(201,168,76,0.28);
+  color:rgba(44,26,14,0.55);
   letter-spacing:0.05em;
 }
 
@@ -404,7 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="notepad-line"></div>
             <div class="notepad-line" style="width:60%"></div>
           </div>
-          <div style="background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.2);border-radius:3px;flex:1;display:flex;align-items:center;justify-content:center;font-size:13px;color:rgba(240,208,128,0.6);letter-spacing:0.05em">
+          <div style="background:rgba(201,162,39,0.15);border:1px solid rgba(201,162,39,0.2);border-radius:3px;flex:1;display:flex;align-items:center;justify-content:center;font-size:13px;color:rgba(216,190,89,0.6);letter-spacing:0.05em">
             caramel
           </div>
         </div>
@@ -438,42 +442,24 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </div>
 
-<section class="collections">
-  <div class="section-tag">Shop by vibe</div>
-  <h2 class="section-title">The Collections</h2>
-  <p class="section-sub">Every piece designed to live together. Mix, match, and make it yours.</p>
-  <div class="collections-grid">
-    <div class="coll-card">
-      <div class="coll-img desk-bg">
-        <div class="badge-new">New</div>
-        <span class="coll-icon">Desk</span>
-      </div>
-      <div class="coll-body">
-        <div class="coll-name">The Desk Edit</div>
-        <div class="coll-desc">Organizers, trays, pen holders & more — everything your desk deserves.</div>
-        <div class="coll-price">From ₹299</div>
-      </div>
+<section class="why-section">
+  <div class="section-tag" style="justify-content:center">Why Caramel</div>
+  <h2 class="section-title">Not just pretty.<br><em style="font-family:'Cormorant Garamond',serif;font-style:italic">Intentional.</em></h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-num">01</div>
+      <div class="why-title">Everything matches</div>
+      <div class="why-desc">No more hunting 10 different Amazon sellers. Every Caramel piece is designed to live together in one warm, cohesive palette.</div>
     </div>
-    <div class="coll-card">
-      <div class="coll-img room-bg">
-        <div class="badge-new">New</div>
-        <span class="coll-icon">Room</span>
-      </div>
-      <div class="coll-body">
-        <div class="coll-name">Room Makeover</div>
-        <div class="coll-desc">Lights, prints, decor & shelf styling to transform any hostel room.</div>
-        <div class="coll-price">From ₹499</div>
-      </div>
+    <div class="why-card">
+      <div class="why-num">02</div>
+      <div class="why-title">Made for your space</div>
+      <div class="why-desc">Hostel rooms, home desks, studio apartments - Caramel pieces are compact, functional, and ridiculously photogenic.</div>
     </div>
-    <div class="coll-card">
-      <div class="coll-img shelf-bg">
-        <span class="coll-icon">Shelf</span>
-      </div>
-      <div class="coll-body">
-        <div class="coll-name">Shelf Styling</div>
-        <div class="coll-desc">Mini planters, bookends, candles & little things that complete a corner.</div>
-        <div class="coll-price">From ₹199</div>
-      </div>
+    <div class="why-card">
+      <div class="why-num">03</div>
+      <div class="why-title">The unboxing moment</div>
+      <div class="why-desc">Every order arrives in our signature caramel packaging. The kind people post about. The kind you don't throw away.</div>
     </div>
   </div>
 </section>
@@ -509,7 +495,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="kit-item-name">Mini Planter</div>
         <div class="kit-item-desc">Terracotta + succulent</div>
       </div>
-      <div class="kit-item" style="background:rgba(201,168,76,0.06)">
+      <div class="kit-item" style="background:rgba(250,246,238,0.18)">
         <div class="kit-item-icon">06</div>
         <div class="kit-item-name">Caramel Box</div>
         <div class="kit-item-desc">Gift-ready packaging</div>
@@ -518,28 +504,28 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
   <div class="kit-visual">
     <div class="kit-box">
-      <div class="kit-box-dot" style="background:#5C4020"></div>
+      <div class="kit-box-dot" style="background:#2C1A0E"></div>
       <div class="kit-box-info">
         <div class="kit-box-name">Beige Desk Organizer</div>
         <div class="kit-box-sub">Multi-slot, matte finish</div>
       </div>
     </div>
     <div class="kit-box">
-      <div class="kit-box-dot" style="background:#7A5530"></div>
+      <div class="kit-box-dot" style="background:#7A4E2D"></div>
       <div class="kit-box-info">
         <div class="kit-box-name">Catchall Tray + Pens</div>
         <div class="kit-box-sub">Ceramic tray, 3 pens</div>
       </div>
     </div>
     <div class="kit-box">
-      <div class="kit-box-dot" style="background:#9E7040"></div>
+      <div class="kit-box-dot" style="background:#C9A227"></div>
       <div class="kit-box-info">
         <div class="kit-box-name">Mini Planter</div>
         <div class="kit-box-sub">Terracotta, succulent included</div>
       </div>
     </div>
     <div class="kit-box">
-      <div class="kit-box-dot" style="background:rgba(201,168,76,0.2);border:1px solid rgba(201,168,76,0.3)"></div>
+      <div class="kit-box-dot" style="background:rgba(44,26,14,0.2);border:1px solid rgba(44,26,14,0.3)"></div>
       <div class="kit-box-info">
         <div class="kit-box-name">Neutral Sticky Notes</div>
         <div class="kit-box-sub">3 sizes, 90 sheets</div>
@@ -555,24 +541,42 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </section>
 
-<section class="why-section">
-  <div class="section-tag" style="justify-content:center">Why Caramel</div>
-  <h2 class="section-title">Not just pretty.<br><em style="font-family:'Cormorant Garamond',serif;font-style:italic">Intentional.</em></h2>
-  <div class="why-grid">
-    <div class="why-card">
-      <div class="why-num">01</div>
-      <div class="why-title">Everything matches</div>
-      <div class="why-desc">No more hunting 10 different Amazon sellers. Every Caramel piece is designed to live together in one warm, cohesive palette.</div>
+<section class="collections">
+  <div class="section-tag">Shop by vibe</div>
+  <h2 class="section-title">The Collections</h2>
+  <p class="section-sub">Every piece designed to live together. Mix, match, and make it yours.</p>
+  <div class="collections-grid">
+    <div class="coll-card">
+      <div class="coll-img desk-bg">
+        <div class="badge-new">New</div>
+        <span class="coll-icon">Desk</span>
+      </div>
+      <div class="coll-body">
+        <div class="coll-name">The Desk Edit</div>
+        <div class="coll-desc">Organizers, trays, pen holders & more - everything your desk deserves.</div>
+        <div class="coll-price">From ₹299</div>
+      </div>
     </div>
-    <div class="why-card">
-      <div class="why-num">02</div>
-      <div class="why-title">Made for your space</div>
-      <div class="why-desc">Hostel rooms, home desks, studio apartments — Caramel pieces are compact, functional, and ridiculously photogenic.</div>
+    <div class="coll-card">
+      <div class="coll-img room-bg">
+        <div class="badge-new">New</div>
+        <span class="coll-icon">Room</span>
+      </div>
+      <div class="coll-body">
+        <div class="coll-name">Room Makeover</div>
+        <div class="coll-desc">Lights, prints, decor & shelf styling to transform any hostel room.</div>
+        <div class="coll-price">From ₹499</div>
+      </div>
     </div>
-    <div class="why-card">
-      <div class="why-num">03</div>
-      <div class="why-title">The unboxing moment</div>
-      <div class="why-desc">Every order arrives in our signature caramel packaging. The kind people post about. The kind you don't throw away.</div>
+    <div class="coll-card">
+      <div class="coll-img shelf-bg">
+        <span class="coll-icon">Shelf</span>
+      </div>
+      <div class="coll-body">
+        <div class="coll-name">Shelf Styling</div>
+        <div class="coll-desc">Mini planters, bookends, candles & little things that complete a corner.</div>
+        <div class="coll-price">From ₹199</div>
+      </div>
     </div>
   </div>
 </section>
